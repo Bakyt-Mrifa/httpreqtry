@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.6488294314381271" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.megacom.okhttptest.controller.LotHttpRequestCtrl">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ComboBox fx:id="cmbxGetField" layoutX="28.0" layoutY="39.0" prefHeight="25.0" prefWidth="246.0" promptText="Получить информацию по:" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="39.0" />
+            <TextField fx:id="txtGetValue" layoutX="29.0" layoutY="75.0" prefHeight="25.0" prefWidth="231.0" promptText="Введите значение" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="129.0" />
+            <TextField fx:id="txtHttpGetServerAddress" layoutX="28.0" layoutY="112.0" prefHeight="25.0" prefWidth="246.0" promptText="//адрес GET сервера" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="112.0" />
+            <Button fx:id="btnGet" layoutX="279.0" layoutY="75.0" mnemonicParsing="false" onAction="#OnButtonClicked" prefHeight="25.0" prefWidth="98.0" text="Получить" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="75.0" />
+            <TableView fx:id="tbGet" layoutY="150.0" prefHeight="248.0" prefWidth="287.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+               <columns>
+                  <TableColumn fx:id="colmName" prefWidth="75.0" text="Название" />
+                  <TableColumn fx:id="colmMinPrice" prefWidth="75.0" text="мин.цена" />
+                  <TableColumn fx:id="colmPrice" prefWidth="75.0" text="Стоимость" />
+                  <TableColumn fx:id="colmStartDate" prefWidth="75.0" text="Дата нач." />
+                  <TableColumn fx:id="colmEndDate" prefWidth="75.0" text="Дата конец" />
+                  <TableColumn fx:id="colmStep" prefWidth="75.0" text="Шаг" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <MenuBar layoutX="-1.0" prefHeight="25.0" prefWidth="296.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Файл">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Справочник">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="376.0" prefWidth="249.0">
+         <children>
+            <TextField fx:id="txtHttpPostServerAddress" layoutX="26.0" layoutY="21.0" prefHeight="25.0" prefWidth="162.0" promptText="http://адрес POST сервера" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostName" layoutX="26.0" layoutY="61.0" prefHeight="25.0" prefWidth="162.0" promptText="Названия лота" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostMinPrice" layoutX="26.0" layoutY="101.0" prefHeight="25.0" prefWidth="162.0" promptText="Минимальная цена" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostPrice" layoutX="26.0" layoutY="137.0" prefHeight="25.0" prefWidth="162.0" promptText="Стоимость товара" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostStep" layoutX="26.0" layoutY="176.0" prefHeight="25.0" prefWidth="162.0" promptText="Шаг стоимости" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostStartDate" layoutX="26.0" layoutY="211.0" prefHeight="25.0" prefWidth="162.0" promptText="Дата начала" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <TextField fx:id="txtPostEndDate" layoutX="26.0" layoutY="248.0" prefHeight="25.0" prefWidth="162.0" promptText="Дата завершения" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <Button fx:id="btnPost" layoutX="26.0" layoutY="330.0" mnemonicParsing="false" onAction="#OnButtonClicked" prefHeight="25.0" prefWidth="80.0" text="Отправить" />
+            <ComboBox fx:id="cmbxStatus" layoutX="26.0" layoutY="289.0" prefHeight="25.0" prefWidth="162.0" promptText="Статус лота" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="19.0" />
+            <Button fx:id="btnCencel" cancelButton="true" layoutX="116.0" layoutY="330.0" mnemonicParsing="false" onAction="#OnButtonClicked" prefHeight="25.0" prefWidth="73.0" text="Отменить" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
