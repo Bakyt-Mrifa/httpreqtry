@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3fbb428-7601-4848-9239-6f73bcceee87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/helper/impl/DbHelperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,16 +89,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="163" column="14" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
+            <state relative-caret-position="120">
+              <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4676#5098#0" expanded="true" />
-                <element signature="e#5097#5098#0" expanded="true" />
-                <element signature="e#5124#5125#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,8 +152,8 @@
         <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/http/impl/HttpClientHelperImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/helper/DbHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/helper/impl/DbHelperImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java" />
       </list>
     </option>
   </component>
@@ -356,18 +347,18 @@
       <workItem from="1586762729283" duration="7796000" />
       <workItem from="1586849358910" duration="25282000" />
       <workItem from="1586955694114" duration="2679000" />
-      <workItem from="1587134382189" duration="1835000" />
+      <workItem from="1587134382189" duration="2177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49411000" />
+    <option name="totallyTimeSpent" value="49753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -384,7 +375,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -523,16 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/Lot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/javafx-src.zip!/javafx/scene/control/ComboBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6608">
@@ -550,25 +531,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="120">
+          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/controller/LotHttpRequestCtrl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/Lot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="163" column="14" selection-start-line="163" selection-start-column="14" selection-end-line="163" selection-end-column="14" />
+        <state relative-caret-position="272">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4676#5098#0" expanded="true" />
-            <element signature="e#5097#5098#0" expanded="true" />
-            <element signature="e#5124#5125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/kg/megacom/okhttptest/models/StatusDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
