@@ -1,23 +1,25 @@
 package kg.megacom.okhttptest.controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import javafx.util.Callback;
+import kg.megacom.okhttptest.helper.DbHelper;
+import kg.megacom.okhttptest.http.HttpClientHelper;
+import kg.megacom.okhttptest.models.Lot;
+import kg.megacom.okhttptest.models.StatusDto;
+
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
-import kg.megacom.okhttptest.http.HttpClientHelper;
-import kg.megacom.okhttptest.models.Lot;
-import kg.megacom.okhttptest.models.StatusDto;
 
 public class LotHttpRequestCtrl {
     private Stage stage;
@@ -82,6 +84,7 @@ public class LotHttpRequestCtrl {
 
     @FXML
     private ComboBox<StatusDto> cmbxStatus;
+
 
     @FXML
     private Button btnPost;
@@ -151,6 +154,28 @@ lot.setEndDate(endDate);*/
 
     @FXML
     void initialize() {
+        List<StatusDto> list = DbHelper.INSTANCE.getStatus();
+        ObservableList<StatusDto> observableList = FXCollections.observableList(list);
+        cmbxStatus.setItems(observableList);
 
     }
+
+    /*Callback<ListView<StatusDto>, ListCell<StatusDto>> cellFactory = new Callback<ListView<StatusDto>, ListCell<StatusDto>>() {
+
+        @Override
+        public ListCell<StatusDto> call(ListView<StatusDto> l) {
+            return new ListCell<StatusDto>() {
+
+                @Override
+                protected void updateItem(StatusDto item, boolean empty) {
+                    super.updateItem(item, empty);
+                    if (item == null || empty) {
+                        setGraphic(null);
+                    } else {
+                        setText(*//*item.getId() + "    " +*//* item.getName());
+                    }
+                }
+            } ;
+        }
+    };*/
 }
