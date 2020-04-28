@@ -25,7 +25,7 @@ public class HttpClientHelperImpl implements HttpClientHelper {
 
             if (response.isSuccessful()) {
                 lot=om.readValue(response.body().string(), Lot.class);
-                System.out.println(lot);
+                System.out.println("После метода saveLot: "+lot);
             }else {
                 System.out.println("Произошла системная ошибка!");
             }

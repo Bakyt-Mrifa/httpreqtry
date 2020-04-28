@@ -136,11 +136,11 @@ public class LotHttpRequestCtrl {
         lot.setMinPrice(Double.parseDouble(txtPostMinPrice.getText()));
         lot.setLotPrice(Double.parseDouble(txtPostPrice.getText()));
         lot.setStep(Double.parseDouble(txtPostStep.getText()));
-      //  lot.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText()));
-       // lot.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText()));
-       // lot.setStatusDto(cmbxStatus.getSelectionModel().getSelectedItem());
+        lot.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText()));
+        lot.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText()));
+        lot.setStatusDto(cmbxStatus.getSelectionModel().getSelectedItem());
 //      HttpClientHelper.INSTANCE.saveLot(lot);
-        System.out.println(lot);
+        System.out.println("До INSTANCE: "+lot);
         HttpClientHelper.INSTANCE.saveLot(lot, httpPostServer);
 
     }
