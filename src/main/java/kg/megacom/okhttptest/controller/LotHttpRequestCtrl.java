@@ -1,5 +1,6 @@
 package kg.megacom.okhttptest.controller;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -135,15 +136,11 @@ public class LotHttpRequestCtrl {
         lot.setMinPrice(Double.parseDouble(txtPostMinPrice.getText()));
         lot.setLotPrice(Double.parseDouble(txtPostPrice.getText()));
         lot.setStep(Double.parseDouble(txtPostStep.getText()));
-        lot.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText()));
- /*lot.setStartDate(startDate);
-lot.setEndDate(endDate);*/
-        lot.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText()));
-        lot.setStatusDto(cmbxStatus.getSelectionModel().getSelectedItem());
+      //  lot.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText()));
+       // lot.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText()));
+       // lot.setStatusDto(cmbxStatus.getSelectionModel().getSelectedItem());
 //      HttpClientHelper.INSTANCE.saveLot(lot);
         System.out.println(lot);
-        System.out.println("startDate "+ lot.getStartDate());
-        System.out.println("EndDate "+ lot.getEndDate());
         HttpClientHelper.INSTANCE.saveLot(lot, httpPostServer);
 
     }

@@ -8,7 +8,7 @@ import kg.megacom.okhttptest.models.Lot;
 import java.io.IOException;
 
 public class HttpClientHelperImpl implements HttpClientHelper {
-    private ObjectMapper om;
+    private ObjectMapper om=new ObjectMapper();
     private OkHttpClient okHttpClient=new OkHttpClient();
     public Lot saveLot(Lot lot, String httpPostServer) throws IOException {
             RequestBody requestBody=RequestBody.create(MediaType.parse("application/json"), om.writeValueAsString(lot));
@@ -20,6 +20,9 @@ public class HttpClientHelperImpl implements HttpClientHelper {
                     .build();
 
             Response response=okHttpClient.newCall(request).execute();
+            int code=response.code();
+        System.out.println("Код запроса: "+code+" - Успешно!!!");
+
             if (response.isSuccessful()) {
                 lot=om.readValue(response.body().string(), Lot.class);
                 System.out.println(lot);

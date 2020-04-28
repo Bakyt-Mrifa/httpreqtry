@@ -19,7 +19,7 @@ public class OkhttpHelper {
     public void get () throws IOException {
         Request request=new Request.Builder()
                 .addHeader("Content-type","application/json")
-                .url("http://localhost:8080/lots/get/15")
+                .url("http://localhost:8080/lots/get")
                 .build();
         Response response = httpClient.newCall(request).execute();
 
