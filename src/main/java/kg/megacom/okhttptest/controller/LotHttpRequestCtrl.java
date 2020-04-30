@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.util.Callback;
@@ -18,9 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class LotHttpRequestCtrl {
     private Stage stage;
@@ -97,7 +96,7 @@ public class LotHttpRequestCtrl {
     private Button btnCencel;
 
     @FXML
-    void OnButtonClicked(ActionEvent event){
+    void OnButtonClicked(ActionEvent event) throws IOException {
         if (event.getSource().equals(btnGet)){
             onGetButton();
         }else if (event.getSource().equals(btnPost)){
@@ -123,13 +122,6 @@ public class LotHttpRequestCtrl {
     private void onPostButton() throws IOException, ParseException {
         Lot lot=new Lot();
         String httpPostServer=txtHttpPostServerAddress.getText();
-       /* String name=txtPostName.getText();
-        double minPrice=Double.parseDouble(txtPostMinPrice.getText());
-        double price=Double.parseDouble(txtPostPrice.getText());
-        double step=Double.parseDouble(txtPostStep.getText());
-        Date startDate=new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText());
-        Date endDate=new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText());
-        StatusDto statusDto=cmbxStatus.getSelectionModel().getSelectedItem();*/
         System.out.println(httpPostServer);
 
         lot.setLotName(txtPostName.getText());
@@ -139,13 +131,18 @@ public class LotHttpRequestCtrl {
         lot.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostStartDate.getText()));
         lot.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(txtPostEndDate.getText()));
         lot.setStatusDto(cmbxStatus.getSelectionModel().getSelectedItem());
-//      HttpClientHelper.INSTANCE.saveLot(lot);
         System.out.println("До INSTANCE: "+lot);
         HttpClientHelper.INSTANCE.saveLot(lot, httpPostServer);
 
     }
 
-    private void onGetButton() {
+    private void onGetButton() throws IOException {
+        String httpGetServer=txtHttpGetServerAddress.getText();
+        int id=Integer.parseInt(txtGetValue.getText());
+        Lot lot=HttpClientHelper.INSTANCE.getLot(id, httpGetServer);
+        List<Lot> list= Arrays.asList(lot);
+        ObservableList<Lot> observableList=FXCollections.observableList(list);
+        tbGet.setItems(observableList);
 
     }
 
@@ -154,6 +151,15 @@ public class LotHttpRequestCtrl {
         List<StatusDto> list = DbHelper.INSTANCE.getStatus();
         ObservableList<StatusDto> observableList = FXCollections.observableList(list);
         cmbxStatus.setItems(observableList);
+
+        //Fill table view
+
+        colmName.setCellValueFactory(new PropertyValueFactory<Lot, String>("lotName"));
+        colmPrice.setCellValueFactory(new PropertyValueFactory<Lot, Double>("lotPrice"));
+        colmMinPrice.setCellValueFactory(new PropertyValueFactory<Lot, Double>("minPrice"));
+        colmStartDate.setCellValueFactory(new PropertyValueFactory<Lot, Date>("startDate"));
+        colmEndDate.setCellValueFactory(new PropertyValueFactory<Lot, Date>("endDate"));
+        colmStep.setCellValueFactory(new PropertyValueFactory<Lot, Double>("step"));
 
     }
 

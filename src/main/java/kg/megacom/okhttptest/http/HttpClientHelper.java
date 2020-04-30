@@ -10,5 +10,5 @@ public interface HttpClientHelper {
 
     Lot saveLot(Lot lot, String httpPostServer) throws IOException;
     //Lot saveLot(Lot lot) throws IOException;
-    Lot getLot(Lot lot);
+    Lot getLot(int id, String httpGetServer) throws IOException;
 }
